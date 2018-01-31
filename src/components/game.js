@@ -5,12 +5,16 @@ class Game extends Component {
         super(props);
 
         this.state = {
-            randomNumber: '',
+            randomNumber: 0,
             userGuess: '',
         };
 
         this.handleInput= this.handleInput.bind(this); 
 
+    }
+
+    componentDidMount(){
+        this.generateRandomNumber(); 
     }
 
     handleInput(event){
@@ -21,26 +25,27 @@ class Game extends Component {
             userGuess: value
         })
     }
-    randomNumberCreator(){
+    generateRandomNumber(){
+        const randNum = Math.floor(Math.random()* 10) + 1; 
 
-    }
-
-    reset(){
         this.setState({
-            randomNumber: '',
-            userGuess: ''
+            randomNumber: randNum
         });
     }
+
+    resetGame(){
+        this.generateRandomNumber(); 
+    }
     render(){
+    
+        // console.log('State: ', this.state); 
+
         return(
             <div>
-                <h1 className="text-center my-3">Guessing Game</h1>
-                <form>
-                    <p value={this.state.userGuess}></p>
+                    <p>Random Number: {this.state.randomNumber}</p>
                     <input value={this.state.userGuess} onChange={this.handleInput}/>
-                    <button onClick={this.reset}>Reset</button>
+                    <button className="btn red darken-2" onClick={this.resetGame.bind(this)}>Reset</button>
                     <button>Submit</button>
-                </form>
             </div>
         )
     }

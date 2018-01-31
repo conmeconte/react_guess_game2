@@ -15,6 +15,7 @@
     "url": " https://github.com/conmeconte/react_guess_game2.git"
   },
   "dependencies": {
+    "materialize-css": "^0.100.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
