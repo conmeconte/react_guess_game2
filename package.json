@@ -1,18 +1,18 @@
 {
   "name": "guess_game",
   "version": "1.0.0",
-  "description": "Base repo for creating a simple number guessing game",
+  "description": "Guessing Game Made in ReactJS",
   "main": "index.js",
   "scripts": {
     "start": "node dev_server.js",
     "bundle": "node_modules/.bin/webpack --config webpack.deploy.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Scott Bowler",
+  "author": "Chung Hwan Hong",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Learning-Fuze/react_guess_game.git"
+    "url": " https://github.com/conmeconte/react_guess_game2.git"
   },
   "dependencies": {
     "react": "^15.6.1",
